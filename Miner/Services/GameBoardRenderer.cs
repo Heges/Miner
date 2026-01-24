@@ -1,9 +1,9 @@
 ﻿using MinerDomain;
 using MinerDomain.Interfaces;
 
-namespace MinerInfrastructure
+namespace Miner.Services
 {
-    public class ConsoleRenderer : IGameBoardRenderer
+    public class GameBoardRenderer : IGameBoardRenderer
     {
         public void Render(GameBoard board, bool isGameOver, bool isVictory, int elapsedSeconds, int steps, int flags, bool isDebug = false)
         {
@@ -39,11 +39,11 @@ namespace MinerInfrastructure
                     if (isDebug)
                     {
                         symbol = !(x == 0 || x == board.Width - 1 || y == 0 || y == board.Height - 1)
-                        ? (cell.IsMarked ? '!' : cell.IsBomb ? '*' : (cell.BombsAround > 0 ? cell.BombsAround.ToString()[0] : ' '))
+                        ? cell.IsMarked ? '!' : cell.IsBomb ? '*' : cell.BombsAround > 0 ? cell.BombsAround.ToString()[0] : ' '
                         : '=';
                     }
                     symbol = !(x == 0 || x == board.Width - 1 || y == 0 || y == board.Height - 1)
-                        ? (cell.IsMarked ? '!' : cell.IsRevealed ? (cell.IsBomb ? '*' : (cell.BombsAround > 0 ? cell.BombsAround.ToString()[0] : ' ')) : '.')
+                        ? cell.IsMarked ? '!' : cell.IsRevealed ? cell.IsBomb ? '*' : cell.BombsAround > 0 ? cell.BombsAround.ToString()[0] : ' ' : '.'
                         : '=';
 
 

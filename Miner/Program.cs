@@ -1,19 +1,19 @@
 ﻿using Container;
-using MinerInfrastructure;
+using Miner.Services;
 
 namespace Miner
 {
     public class Program
     {
-        private static DIContainer _rootContainer = new();
-
         static void Main(string[] args)
         {
+            DIContainer _rootContainer = new();
+
             int width = 12;
             int height = 12;
             int bombCount = (int)(width * height * 0.1f);
 
-            var settings = new GameSettings()
+            var settings = new GameState()
             {
                 CurrentLevelId = 1,
                 Timer = 00.00f,
@@ -24,7 +24,7 @@ namespace Miner
                 InitialCursorPositionY = 1,
             };
 
-            _rootContainer.RegisterInstance<GameSettings>(settings);
+            _rootContainer.RegisterInstance<GameState>(settings);
             _rootContainer.RegisterFactory(_ => new GameEntryPoint(_rootContainer))
                 .AsSingle();
 

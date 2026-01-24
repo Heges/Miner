@@ -7,7 +7,7 @@ namespace Miner
     {
         private readonly DIContainer _container;
 
-        private readonly IGame _gameService;
+        private readonly IGameRoot _gameService;
 
         public GameEntryPoint(DIContainer container)
         {
@@ -15,7 +15,7 @@ namespace Miner
 
             GameRegistration.Register(container);
 
-            _gameService = container.Resolve<IGame>();
+            _gameService = container.Resolve<IGameRoot>();
         }
 
         public bool Update()

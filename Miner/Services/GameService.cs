@@ -1,13 +1,14 @@
 ﻿using System.Diagnostics;
+using Miner.Core.Interfaces;
 using MinerApplication;
 using MinerApplication.cmd;
 using MinerDomain;
 using MinerDomain.Interfaces;
 using MinerDomain.Interfaces.cmd;
 
-namespace Miner
+namespace Miner.Services
 {
-    public class GameService : IGame
+    public class GameService : IGameRoot
     {
         private bool _isFirstReveal = false;
         private readonly IController _controller;

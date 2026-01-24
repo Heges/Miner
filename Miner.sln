@@ -5,12 +5,6 @@ VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Miner", "Miner\Miner.csproj", "{3EA96B97-3BA7-4D33-B843-6782488F4E69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinerDomain", "MinerDomain\MinerDomain.csproj", "{BD698F4A-287A-499F-B2B1-B41706EBA810}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinerApplication", "MinerApplication\MinerApplication.csproj", "{D0FDF6FF-1084-490E-8906-F3121F67E4A8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinerInfrastructure", "MinerInfrastructure\MinerInfrastructure.csproj", "{A99E24E3-8846-477A-AC14-60A4C81C1975}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Container", "Container\Container.csproj", "{9CC67A56-4285-4D39-8A7A-D69090BDFE34}"
 EndProject
 Global
@@ -23,18 +17,6 @@ Global
 		{3EA96B97-3BA7-4D33-B843-6782488F4E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EA96B97-3BA7-4D33-B843-6782488F4E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EA96B97-3BA7-4D33-B843-6782488F4E69}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BD698F4A-287A-499F-B2B1-B41706EBA810}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BD698F4A-287A-499F-B2B1-B41706EBA810}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BD698F4A-287A-499F-B2B1-B41706EBA810}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BD698F4A-287A-499F-B2B1-B41706EBA810}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D0FDF6FF-1084-490E-8906-F3121F67E4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0FDF6FF-1084-490E-8906-F3121F67E4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0FDF6FF-1084-490E-8906-F3121F67E4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D0FDF6FF-1084-490E-8906-F3121F67E4A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A99E24E3-8846-477A-AC14-60A4C81C1975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A99E24E3-8846-477A-AC14-60A4C81C1975}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A99E24E3-8846-477A-AC14-60A4C81C1975}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A99E24E3-8846-477A-AC14-60A4C81C1975}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9CC67A56-4285-4D39-8A7A-D69090BDFE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9CC67A56-4285-4D39-8A7A-D69090BDFE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CC67A56-4285-4D39-8A7A-D69090BDFE34}.Release|Any CPU.ActiveCfg = Release|Any CPU

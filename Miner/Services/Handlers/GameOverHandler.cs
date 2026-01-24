@@ -1,6 +1,7 @@
-﻿using MinerDomain.Interfaces;
+﻿using MinerApplication.cmd;
+using MinerDomain.Interfaces;
 
-namespace MinerApplication.cmd
+namespace Miner.Services.Handlers
 {
     public class GameOverHandler : ICommandHandler<GameOverCommand, bool>
     {

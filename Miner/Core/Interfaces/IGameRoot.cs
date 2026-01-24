@@ -1,6 +1,6 @@
 ﻿namespace MinerDomain.Interfaces
 {
-    public interface IGame
+    public interface IGameRoot
     {
         public bool NewGame();
         public bool Update();

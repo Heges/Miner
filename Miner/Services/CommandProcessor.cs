@@ -1,13 +1,10 @@
-﻿namespace MinerDomain.Interfaces.cmd
+﻿using MinerDomain.Interfaces;
+
+namespace Miner.Services
 {
     public class CommandProcessor : ICommandProcessor
     {
         private readonly Dictionary<Type, object> _handlesMap = new();
-
-        public CommandProcessor()
-        {
-
-        }
 
         public TResult Process<TCommand, TResult>(TCommand command) 
             where TCommand : ICommand<TResult>

@@ -1,6 +1,6 @@
 ﻿using MinerDomain;
 
-namespace MinerApplication
+namespace Miner.Core.Interfaces
 {
     public interface IUIView
     {

@@ -1,7 +1,8 @@
 ﻿using MinerDomain.Interfaces.cmd;
 using MinerDomain.Interfaces;
+using MinerApplication.cmd;
 
-namespace MinerApplication.cmd
+namespace Miner.Services.Handlers
 {
     public class GameWinCommandHandler : ICommandHandler<GameWinCommand, bool>
     {

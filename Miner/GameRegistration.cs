@@ -1,10 +1,10 @@
 ﻿using Container;
+using Miner.Services;
+using Miner.Services.Handlers;
+using Miner.UI;
 using MinerApplication;
-using MinerApplication.cmd;
 using MinerDomain;
 using MinerDomain.Interfaces;
-using MinerDomain.Interfaces.cmd;
-using MinerInfrastructure;
 
 namespace Miner
 {
@@ -14,7 +14,7 @@ namespace Miner
         {
             container.RegisterFactory(_ =>
             {
-                var settings = container.Resolve<GameSettings>();
+                var settings = container.Resolve<GameState>();
                 return new GameBoard(settings.Width, settings.Height);
             }).AsSingle();
 
@@ -27,15 +27,15 @@ namespace Miner
             container.RegisterFactory(_ =>
             {
                 var boardService = container.Resolve<BoardService>();
-                return new ConsoleController(boardService);
+                return new MovingController(boardService);
             });
 
-            container.RegisterFactory(_ => new ConsoleRenderer());
+            container.RegisterFactory(_ => new GameBoardRenderer());
 
             container.RegisterFactory(_ =>
             {
-                var settings = container.Resolve<GameSettings>();
-                var consoleRenderer = container.Resolve<ConsoleRenderer>();
+                var settings = container.Resolve<GameState>();
+                var consoleRenderer = container.Resolve<GameBoardRenderer>();
                 var gameBoard = container.Resolve<GameBoard>();
                 return new ConsoleUI(consoleRenderer, gameBoard, settings);
             });
@@ -43,10 +43,10 @@ namespace Miner
             container.RegisterFactory<ICommandProcessor>(_ => new CommandProcessor())
                 .AsSingle();
 
-            container.RegisterFactory<IGame>(_ =>
+            container.RegisterFactory<IGameRoot>(_ =>
             {
-                var settings = container.Resolve<GameSettings>();
-                var consoleController = container.Resolve<ConsoleController>();
+                var settings = container.Resolve<GameState>();
+                var consoleController = container.Resolve<MovingController>();
                 var consoleUI = container.Resolve<ConsoleUI>();
                 var boardService = container.Resolve<BoardService>();
 

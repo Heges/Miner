@@ -1,4 +1,7 @@
-﻿namespace MinerDomain.Interfaces.cmd
+﻿using MinerDomain.Interfaces;
+using MinerDomain.Interfaces.cmd;
+
+namespace Miner.Services.Handlers
 {
     public class MoveLefttCommandHandler : ICommandHandler<MoveLefttCommand, bool>
     {

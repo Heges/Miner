@@ -2,13 +2,13 @@
 using MinerDomain;
 using MinerDomain.Interfaces;
 
-namespace Miner
+namespace Miner.Services
 {
-    public class ConsoleController : IController
+    public class MovingController : IController
     {
         private readonly BoardService _boardService;
 
-        public ConsoleController(BoardService board)
+        public MovingController(BoardService board)
         {
             _boardService = board;
         }

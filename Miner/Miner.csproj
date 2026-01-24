@@ -9,9 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Container\Container.csproj" />
-    <ProjectReference Include="..\MinerApplication\MinerApplication.csproj" />
-    <ProjectReference Include="..\MinerDomain\MinerDomain.csproj" />
-    <ProjectReference Include="..\MinerInfrastructure\MinerInfrastructure.csproj" />
   </ItemGroup>
 
 </Project>

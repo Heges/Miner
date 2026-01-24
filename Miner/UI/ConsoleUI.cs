@@ -1,8 +1,8 @@
-﻿using MinerApplication;
+﻿using Miner.Core.Interfaces;
 using MinerDomain;
 using MinerDomain.Interfaces;
 
-namespace Miner
+namespace Miner.UI
 {
     public class ConsoleUI : IUIView
     {
